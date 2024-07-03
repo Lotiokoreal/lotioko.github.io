@@ -1,0 +1,410 @@
+/* CSS qui permet de faire le Header, Footer etc...*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 1rem 0;
+}
+
+nav .navBack {
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    display: inline-block;
+    transition: color 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease, transform 0.3s ease;
+    position: relative;
+    border-radius: 5px;
+}
+
+nav .navBack::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    left: 50%;
+    bottom: 10px;
+    background: #333;
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav .navBack:hover::after {
+    width: 70%;
+}
+
+nav .navBack:hover {
+    color: #333;
+    background-color: #fff;
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #333;
+    animation: fadeOut 1s forwards 0.5s;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: logoMove 3s forwards;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes logoMove {
+    0% {
+        transform: scale(3);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+main {
+    flex: 3;
+    display: flex;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    flex-direction: row;
+}
+
+.container {
+    flex: 4;
+}
+
+.container3 {
+    flex: 4;
+    margin: 2rem;
+}
+
+.right-article {
+    flex: 2;
+    width: 800px;
+    height: 400px;
+    margin-left: 5rem;
+    padding: 5rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.right-article form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.right-article input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.right-article button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.right-article button:hover {
+    background-color: #555;
+}
+
+.article {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+}
+
+p {
+    margin-top: 1vh;
+}
+
+img {
+    margin-top: 3vh;
+}
+
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.admin-content {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.admin-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.admin-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-content textarea {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+    resize: vertical;
+}
+
+.admin-content button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-content button:hover {
+    background-color: #555;
+}
+
+/* contact */
+
+.contact-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 100px auto 20px; /* Add margin-top to account for the fixed header */
+}
+
+.contact-card label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.contact-card input,
+.contact-card textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-card button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.contact-card button:hover {
+    background-color: #218838;
+}
+
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-button:hover {
+    background-color: #218838;
+}
+
+.chat-form {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chat-header {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chat-body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#chatOutput {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.send-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #218838;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #ccc;
+}
+
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-button:hover {
+    background-color: #218838;
+}

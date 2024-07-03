@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Kenan</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="../logoJeanMonnet.png" rel="icon" type="image/png" />
+</head>
+
+<body>
+    <div class="background-overlay"></div> <!-- Overlay de fond pour le fondu -->
+    <header>
+        <div class="container header-left">
+            <h1 class="welcome-text">Bienvenue sur mon site</h1>
+        </div>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="../logoJeanMonnet.png" alt="Logo du lycée Jean Monnet a Foulayronnes" href="https://lp-jean-monnet.fr/nos-formations/">
+            </div>
+        </div>
+        <div class="container header-right">
+            <?php if(isset($_SESSION['username'])): ?>
+                <p>Bonjour, <?php echo htmlspecialchars($_SESSION['username']); ?> ! <a href="../logout.php">Déconnexion</a></p>
+            <?php else: ?>
+                <p><a href="login.html">Connexion</a></p>
+            <?php endif; ?>
+        </div>
+    </header>
+    <nav>
+        <a href="../accueil.php" class="navBack">Accueil</a>
+        <a href="apropos.html" class="navBack">À propos</a>
+        <a href="inscription.html" class="navBack">S'inscrire</a>
+        <a href="contact.html" class="navBack">Contact</a>
+    </nav>
+
+    <main>
+        <div class="container3">
+            <h2>Activité : Creation de Site WEB</h2>
+            <p>
+                Pendant mon stage à l'ESIEA, j'ai créé un site web avec HTML, CSS et JavaScript. J'ai utilisé HTML pour structurer le site,
+                CSS pour la personnalisation et pour le rendre plus responsive, puis JavaScript pour ajouter des fonctionnalités interactives.
+                Ce stage m'a permis de comprendre la construction d'un site web et son fonctionnement.
+                Grâce à cela, j'ai pu créer un site web sympa et compact
+            </p>
+            
+        </div>
+        <aside class="right-article">
+            <h3>Realisation a ESIEA par un éléve du Lycée Jean-Monnet</h3>
+            <a href="https://www.esiea.fr/" target="_blank">
+                <img src="https://www.esiea.fr/wp-content/themes/esiea/img/logo-esiea.svg" alt="logo ESIEA" loading="lazy"   width="auto" height="80">
+            </a>
+            <a href="https://lp-jean-monnet.fr/" target="_blank">
+                <img src="../logoJeanMonnet2.png" alt="logo Lycée Jean-Monnet" loading="lazy" width="auto" height="112">
+            </a>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="container2">
+            <p>2024 les gars</p>
+        </div>
+    </footer>
+    <script src="../javascript/sourisnav.js"></script>
+    <script src="../javascript/main.js"></script>
+    <script src="../javascript/dropdown.js"></script>
+</body>
+</html>

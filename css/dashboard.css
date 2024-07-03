@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 1rem 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    display: inline-block;
+    transition: color 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease, transform 0.3s ease;
+    position: relative;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    color: #333;
+    background-color: #fff;
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+.main-nav {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    background-size: auto;
+    padding: 1rem 0;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    display: inline-block;
+    transition: color 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease, transform 0.3s ease;
+    position: relative;
+    border-radius: 5px;
+    margin: 0 1rem;
+}
+
+.main-nav a:hover {
+    color: #444;
+    background-color: #fff;
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    flex-direction: column;
+}
+
+.container3 {
+    flex: 1;
+}
+
+.admin-content {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.admin-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.admin-content form,
+.admin-content table {
+    width: 100%;
+}
+
+.admin-content table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.admin-content table th,
+.admin-content table td {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.admin-content table th {
+    background-color: #f4f4f4;
+}
+
+.admin-content input[type="text"],
+.admin-content input[type="password"],
+.admin-content input[type="email"],
+.admin-content textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.admin-content button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-content button:hover {
+    background-color: #555;
+}
+
+h4 {
+
+    margin: 0.5rem;
+    margin-left: 0rem;
+
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+}
